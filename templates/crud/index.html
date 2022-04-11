@@ -1,0 +1,184 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <style>
+          
+        .button-73 {
+          appearance: none;
+          background-color: #FFFFFF;
+          border-radius: 40em;
+          border-style: none;
+          box-shadow: #ADCFFF 0 -12px 6px inset;
+          box-sizing: border-box;
+          color: #000000;
+          cursor: pointer;
+          width: 12%;
+          display: inline-block;
+          font-family: -apple-system,sans-serif;
+          font-size: 1.2rem;
+          font-weight: 700;
+          letter-spacing: -.24px;
+          margin: 0;
+          outline: none;
+          padding: 1rem 1.3rem;
+          quotes: auto;
+          text-align: center;
+          text-decoration: none;
+          transition: all .15s;
+          user-select: none;
+          -webkit-user-select: none;
+          touch-action: manipulation;
+        }
+        
+        .button-73:hover {
+          background-color: #FFC229;
+          box-shadow: #FF6314 0 -6px 8px inset;
+          transform: scale(1.125);
+        }
+        
+        .button-73:active {
+          transform: scale(1.025);
+        }
+        
+        @media (min-width: 768px) {
+          .button-73 {
+            font-size: 1.5rem;
+            padding: .75rem 2rem;
+          }
+        }
+        
+        
+        
+        /* UTILITIES */
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+         }
+         body {
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          background-image: url('{% static "images/hh.jpg" %}');
+         }
+         a {
+          text-decoration: none;
+         }
+         li {
+          list-style: none;
+         }
+        
+        
+        
+         /* NAVBAR STYLING STARTS */
+        .navbar {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 20px;
+          background-color: teal;
+          color: #fff;
+         }
+         .nav-links a {
+          color: #fff;
+         }
+         /* LOGO */
+         .logo {
+          font-size: 32px;
+         }
+         /* NAVBAR MENU */
+         .menu {
+          display: flex;
+          gap: 1em;
+          font-size: 18px;
+         }
+         .menu li:hover {
+          background-color: #4c9e9e;
+          border-radius: 5px;
+          transition: 0.3s ease;
+         }
+         .menu li {
+          padding: 5px 14px;
+         }
+         /* DROPDOWN MENU */
+         .services {
+          position: relative; 
+         }
+         .dropdown {
+          background-color: rgb(1, 139, 139);
+          padding: 1em 0;
+          position: absolute; /*WITH RESPECT TO PARENT*/
+          display: none;
+          border-radius: 8px;
+          top: 35px;
+         }
+         .dropdown li + li {
+          margin-top: 10px;
+         }
+         .dropdown li {
+          padding: 0.5em 1em;
+          width: 8em;
+          text-align: center;
+         }
+         .dropdown li:hover {
+          background-color: #4c9e9e;
+         }
+         .services:hover .dropdown {
+          display: block;
+         }
+            </style>   
+</head>
+<body>
+    {% include 'crud/abc.html' %}
+       
+      
+    <a href="{% url 'ipd' %}" target="_blank"> 
+    <button class="button-73" role="button" style="margin-left: 60px; margin-top: 180px;">IPD</button>
+    </a>
+           
+    
+    <a href="{% url 'opd' %}" target="_blank">     
+    <button class="button-73" role="button" style="margin-left: 120px; margin-top: 180px;">OPD</button>
+    </a>
+            
+
+    <a href="{% url 'medicine' %}" target="_blank">
+    <button class="button-73" role="button" style="margin-left: 120px; margin-top: 180px;">Medicine</button>
+    </a>
+
+
+    <a href="{% url 'doctor' %}" target="_blank">
+    <button  class="button-73" role="button" style="margin-left: 120px; margin-top: 180px;">Doctor</button>
+    </a>
+
+
+    <a href="{% url 'patient' %}" target="_blank">
+    <button class="button-73" role="button" style="margin-left: 120px; margin-top: 180px;">Patient</button>
+    </a>
+
+
+    <a href="{% url 'ot' %}" target="_blank">
+    <button class="button-73" role="button" style="margin-left: 170px; margin-top: 180px;">OT</button>
+    </a>
+
+
+    <a href="{% url 'bed' %}" target="_blank">
+    <button class="button-73" role="button" style="margin-left: 150px; margin-top: 180px;">Bed</button>
+    </a>
+
+
+    <a href="{% url 'salary' %}" target="_blank">
+    <button class="button-73" role="button" style="margin-left: 150px; margin-top: 180px;">Accounts</button>
+    </a>
+
+
+    <a href="{% url 'employee' %}" target="_blank">
+    <button class="button-73" role="button" style="margin-left: 150px; margin-top: 180px;">Employees</button>
+    </a>
+    
+</body>
+</html>
